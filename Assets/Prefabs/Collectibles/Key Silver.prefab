@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: e121965519da8964eb443caa891ca78c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1170838
+      value: 3.1491055
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: e121965519da8964eb443caa891ca78c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: e121965519da8964eb443caa891ca78c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.82596254
+      value: 0.799881
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: e121965519da8964eb443caa891ca78c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5584928585afc34ea3fe9bbb8ff3031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   rotationSpeed: 75
 --- !u!65 &8232874250230352638
 BoxCollider:

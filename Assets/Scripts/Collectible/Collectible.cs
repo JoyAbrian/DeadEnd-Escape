@@ -3,6 +3,15 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Collectible : MonoBehaviour
 {
+    public enum CollectibleType
+    {
+        SilverKey,
+        GoldKey,
+        SilverCoin,
+        GoldCoin
+    }
+
+    [SerializeField] private CollectibleType type;
     [SerializeField] private float rotationSpeed = 50f;
 
     void Update()
@@ -19,7 +28,27 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            UpdateGlobalVariables();
             Destroy(gameObject);
+        }
+    }
+
+    private void UpdateGlobalVariables()
+    {
+        switch (type)
+        {
+            case CollectibleType.SilverKey:
+                GlobalVariables.silverKeyCount++;
+                break;
+            case CollectibleType.GoldKey:
+                GlobalVariables.goldKeyCount++;
+                break;
+            case CollectibleType.SilverCoin:
+                GlobalVariables.moneyCount += 100;
+                break;
+            case CollectibleType.GoldCoin:
+                GlobalVariables.moneyCount += 300;
+                break;
         }
     }
 }
