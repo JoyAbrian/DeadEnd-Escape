@@ -7,4 +7,7 @@ public class GlobalVariables : MonoBehaviour
 
     public static string playerName = "Player 1";
     public static int moneyCount = 0;
+
+    public static bool isGameFailed = false;
+    public static bool isGameSuccess = false;
 }
