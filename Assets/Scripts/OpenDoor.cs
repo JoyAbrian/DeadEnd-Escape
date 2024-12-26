@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    [SerializeField] private GameObject door;
+    [SerializeField] private GameObject doorClose, doorOpen;
 
-    private BoxCollider doorCollider, openAreaCollider;
+    private BoxCollider openAreaCollider;
 
     void Start()
     {
-        doorCollider = door.GetComponent<BoxCollider>();
+        doorOpen.SetActive(false);
+        doorClose.SetActive(true);
+
         openAreaCollider = GetComponent<BoxCollider>();
     }
 
@@ -18,11 +20,10 @@ public class OpenDoor : MonoBehaviour
         {
             if (GlobalVariables.silverKeyCount > 0)
             {
-                doorCollider.enabled = false;
                 openAreaCollider.enabled = false;
 
-                door.transform.position = new Vector3(-0.633f, 0f, -0.733f);
-                door.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                doorOpen.SetActive(true);
+                doorClose.SetActive(false);
             }
         }
     }
