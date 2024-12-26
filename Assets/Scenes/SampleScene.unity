@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 480814420}
+  gameOverMenu: {fileID: 1251556324}
   title: {fileID: 157501588}
   coinValue: {fileID: 1156954233}
   bloodyScreen: {fileID: 848411597}
@@ -436,6 +437,7 @@ MonoBehaviour:
   rewind: {fileID: 651056483}
   successStars: {fileID: 1988484522}
   nextGame: {fileID: 302439726}
+  transitionDuration: 1
 --- !u!114 &157501588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9172833023173493300, guid: 4ff6657e846bbad48913cd9657429b20, type: 3}
@@ -1572,6 +1574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1251556324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9172833023281101995, guid: 4ff6657e846bbad48913cd9657429b20, type: 3}
+  m_PrefabInstance: {fileID: 1533799958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1278205303
 GameObject:
   m_ObjectHideFlags: 0
