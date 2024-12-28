@@ -24,6 +24,8 @@ public class OpenDoor : MonoBehaviour
 
                 doorOpen.SetActive(true);
                 doorClose.SetActive(false);
+
+                GlobalVariables.silverKeyCount--;
             }
         }
     }
